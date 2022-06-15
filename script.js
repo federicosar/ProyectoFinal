@@ -1,9 +1,14 @@
 //todas las posibilidades de cards de  listas.json
 
+let carrito = JSON.parse(localStorage.getItem('productosCarrito'))??[]
+console.log(carrito)
 fetch("./listas.json")
     .then((response) => response.json())
     .then((data) => {
         data.forEach((element) => {
+
+
+
             Grid.innerHTML += `
             <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
                     <div class="card-header">Estilo ${element.Estilo}</div>
@@ -14,16 +19,41 @@ fetch("./listas.json")
                                 <h4 class="card-title">Precio ${element.id}</h4>
                                 <h4 class="card-title">Precio ${element.precio}</h4>
                             <img style="width:200px;" src="${element.imagen}">
-                            <button class="BotonEnviar">Comenzar</button>
+                            <button id="BotonEnviar${element.id}">Agregar</button>
                         </div>
             </div>    `
 
 
         })
 
+        data.forEach(element => {
+            document.getElementById(`BotonEnviar${element.id}`).addEventListener('click', () => {
+                //let elements = data.find(element => element.id == element.id)
 
-        let botonCarrito = document.querySelectorAll(".BotonEnviar");
-        botonCarrito.forEach(e => e.addEventListener("click", () => console.log('click')))
+                console.log(element)
+                carrito.push(element)
+                localStorage.setItem("productosCarrito", JSON.stringify(carrito))
+
+
+            })
+
+        })
+
+
+
+        //     function botonCarrito (){
+        //         let botonCarrito = document.querySelectorAll("#BotonEnviar");
+        //     botonCarrito.forEach(e => e.addEventListener("click", () => 
+
+
+        //     console.log('click')
+
+
+        //     ))
+
+
+        //     }
+        //     botonCarrito ();
 
 
     });
