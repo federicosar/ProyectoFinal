@@ -14,16 +14,16 @@ fetch("./listas.json")
                                 <h4 class="card-title">Precio ${element.id}</h4>
                                 <h4 class="card-title">Precio ${element.precio}</h4>
                             <img style="width:200px;" src="${element.imagen}">
-                            <button id="BotonEnviar${id}">Comenzar</button>
+                            <button class="BotonEnviar">Comenzar</button>
                         </div>
             </div>    `
 
 
         })
-        
+
 
         let botonCarrito = document.querySelectorAll(".BotonEnviar");
-        botonCarrito.forEach(e=>e.addEventListener("click",()=>console.log('click')))
+        botonCarrito.forEach(e => e.addEventListener("click", () => console.log('click')))
 
 
     });
@@ -38,13 +38,13 @@ const Submit = document.querySelector("#enviarRadio")
 
 
 //funcion que elije estilo de tatuaje del listas.json
-function elegirEstiloRadio (){
+function elegirEstiloRadio() {
     enviarRadio.addEventListener('click', (e) => {
         e.preventDefault()
 
-        let seleccionado= document.querySelector('input[type="radio"]:checked');
+        let seleccionado = document.querySelector('input[type="radio"]:checked');
         console.log(seleccionado.value)
-    
+
         // if (document.getElementById('optionTradicional').checked) 
         //     console.log("trad")
         // if (document.getElementById('optionTribal').checked) 
@@ -53,16 +53,15 @@ function elegirEstiloRadio (){
         //     console.log("real")
         // if (document.getElementById('optionNeotraditional').checked) 
         //     console.log("Ntrad")
-       if(seleccionado.value ){
-        
-            
-            
-            }      
-    
+        if (seleccionado.value) {
+
+
+
+        }
+
     })
 }
 
 elegirEstiloRadio();
 
 //fin de funcion que elije estilo de tatuaje del listas.json
-
