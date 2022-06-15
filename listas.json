@@ -1,0 +1,148 @@
+[{
+        "Estilo": "Tradicional",
+        "Tipo": "blanco y negro",
+        "tamañoAncho": "10",
+        "tamañoLargo": "20",
+        "precio" :"1",
+        "imagen" : "./foto/trady.jpg"
+ ,       "id" :"1"
+
+    },
+    {
+        "Estilo": "Tradicional",
+        "Tipo": "color",
+        "tamañoAncho": "20",
+        "tamañoLargo": "20",
+        "precio" :"1",
+        "imagen" : "./foto/trady.jpg"
+ ,       "id" :"2"
+    },
+    {
+        "Estilo": "Tradicional",
+        "Tipo": "blanco y negro",
+        "tamañoAncho": "30",
+        "tamañoLargo": "20",
+        "precio" :"1",
+        "imagen" : "./foto/trady.jpg"
+ ,       "id" :"3"
+    },
+    {
+        "Estilo": "Tradicional",
+        "Tipo": "color",
+        "tamañoAncho": "40",
+        "tamañoLargo": "40",
+        "precio" :"1",
+        "imagen" : "./foto/trady.jpg"
+ ,       "id" :"4"
+    },
+    {
+        "Estilo": "tribal",
+        "Tipo": "blanco y negro",
+        "tamañoAncho": "10",
+        "tamañoLargo": "20",
+        "precio" :"1",
+        "imagen" : "./foto/tribal.jpg"
+,        "id" :"5"
+    },
+    {
+        "Estilo": "tribal",
+        "Tipo": "color",
+        "tamañoAncho": "10",
+        "tamañoLargo": "20",
+        "precio" :"1",
+        "imagen" : "./foto/tribal.jpg"
+,        "id" :"6"
+    },
+    {
+        "Estilo": "tribal",
+        "Tipo": "blanco y negro",
+        "tamañoAncho": "10",
+        "tamañoLargo": "20",
+        "precio" :"1",
+        "imagen" : "./foto/tribal.jpg"
+,        "id" :"7"
+    },
+    {
+        "Estilo": "tribal",
+        "Tipo": "color",
+        "tamañoAncho": "10",
+        "tamañoLargo": "20",
+        "precio" :"1",
+        "imagen" : "./foto/tribal.jpg"
+,        "id" :"8"
+    },
+    {
+        "Estilo": "Realismo",
+        "Tipo": "blanco y negro",
+        "tamañoAncho": "10",
+        "tamañoLargo": "20",
+        "precio" :"1",
+        "imagen" : "./foto/panda.jpg"
+ ,       "id" :"9"
+    },
+    {
+        "Estilo": "Realismo",
+        "Tipo": "color",
+        "tamañoAncho": "10",
+        "tamañoLargo": "20",
+        "precio" :"1",
+        "imagen" : "./foto/panda.jpg"
+ ,       "id" :"10"
+    },
+    {
+        "Estilo": "Realismo",
+        "Tipo": "blanco y negro",
+        "tamañoAncho": "10",
+        "tamañoLargo": "20",
+        "precio" :"1",
+        "imagen" : "./foto/panda.jpg"
+ ,       "id" :"11"
+    },
+    {
+        "Estilo": "Realismo",
+        "Tipo": "color",
+        "tamañoAncho": "10",
+        "tamañoLargo": "20",
+        "precio" :"1",
+        "imagen" : "./foto/panda.jpg"
+ ,       "id" :"12"
+    },
+    {
+        "Estilo": "Neo Traditional",
+        "Tipo": "blanco y negro",
+        "tamañoAncho": "10",
+        "tamañoLargo": "20",
+        "precio" :"1",
+        "imagen" : "./foto/neotrad.jpg",
+        "id" :"13"
+    },
+    {
+        "Estilo": "Neo Traditional",
+        "Tipo": "color",
+        "tamañoAncho": "10",
+        "tamañoLargo": "20",
+        "precio" :"1",
+        "imagen" : "./foto/neotrad.jpg",
+        "id" :"14"
+    },
+    {
+        "Estilo": "Neo Traditional",
+        "Tipo": "blanco y negro",
+        "tamañoAncho": "10",
+        "tamañoLargo": "20",
+        "precio" :"1",
+        "imagen" : "./foto/neotrad.jpg",
+        "id" :"15"
+    },
+    {
+        "Estilo": "Neo Traditional",
+        "Tipo": "color",
+        "tamañoAncho": "10",
+        "tamañoLargo": "20",
+        "precio" :"1",
+        "imagen" : "./foto/neotrad.jpg",
+        "id" :"16"
+    }
+
+]
+

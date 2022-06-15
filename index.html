@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://bootswatch.com/5/slate/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+
+    <h1> Tattoo world up </h1>
+
+    <div class="sidebar">Abrir Ventana de Compras</div>
+
+    <div>
+        <div id="seleccionDeTamaños">
+            <form>
+                <fieldset>
+
+                    <fieldset class="form-group">
+                        <legend class="mt-4">Selecciona un estilo</legend>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionTradicional"
+                                    value="Tradicional" checked="">
+                                Tradicional
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionTribal"
+                                    value="Tribal">
+                                Tribal
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optionsRadios" id="optionRealismo"
+                                    value="Realismo">
+                                Realismo
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <label class="form-check-label">
+                                <input type="radio" class="form-check-input" name="optionsRadios"
+                                    id="optionNeotraditional" value="Neotraditional">
+                                Neotraditional
+                            </label>
+                        </div>
+
+
+                    </fieldset>
+
+
+
+
+                    <button type="submit" class="btn btn-primary" id="enviarRadio">Enviar</button>
+
+                </fieldset>
+            </form>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <div>
+        <div class="row" id="GridDeCards"></div>
+    </div>
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.17/dist/sweetalert2.all.min.js"></script>
+    <script src="./script.js"></script>
+
+
+
+</body>
+
+</html>
