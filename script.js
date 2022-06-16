@@ -2,14 +2,13 @@
 
 let carrito = JSON.parse(localStorage.getItem('productosCarrito'))??[]
 console.log(carrito)
+
 fetch("./listas.json")
     .then((response) => response.json())
     .then((data) => {
         data.forEach((element) => {
 
-
-
-            Grid.innerHTML += `
+        Grid.innerHTML += `
             <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
                     <div class="card-header">Estilo ${element.Estilo}</div>
                         <div class="card-body">
@@ -21,17 +20,26 @@ fetch("./listas.json")
                             <img style="width:200px;" src="${element.imagen}">
                             <button id="BotonEnviar${element.id}">Agregar</button>
                         </div>
-            </div>    `
-
-
-        })
+            </div>    `})
 
         data.forEach(element => {
-            document.getElementById(`BotonEnviar${element.id}`).addEventListener('click', () => {
-                //let elements = data.find(element => element.id == element.id)
+            let idNombre = document.getElementById(`BotonEnviar${element.id}`).addEventListener('click', () => {
+                //let elements = data.find(element => element.id == element.id) 
+                    console.log(idNombre)
+                if(carrito.some(element => element.id == idNombre)){
+                    let indice = carrito.findIndex(element => element.id == idNombre)
+                    carrito[indice].cant++
 
-                console.log(element)
-                carrito.push(element)
+                    } else {
+                        let seleccionDetatuaje = {
+                            ...data,
+                            cant: 1
+                                                    } 
+                                                    carrito.push(seleccionDetatuaje)
+                                                    }
+                
+                
+                
                 localStorage.setItem("productosCarrito", JSON.stringify(carrito))
 
 
