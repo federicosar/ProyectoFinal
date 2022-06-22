@@ -2,8 +2,8 @@
 
 let carrito = JSON.parse(localStorage.getItem('productosCarrito'))??[]
 console.log(carrito)
-
-fetch("./listas.json")
+function mostarCards (){
+    fetch("./listas.json")
     .then((response) => response.json())
     .then((data) => {
         data.forEach((element) => {
@@ -24,9 +24,8 @@ fetch("./listas.json")
 
         data.forEach(element => {
             let idNombre = document.getElementById(`BotonEnviar${element.id}`).addEventListener('click', () => {
-                //let elements = data.find(element => element.id == element.id) 
-                    console.log(idNombre)
-                if(carrito.some(element => element.id == idNombre)){
+                //let elements = data.find(element => element.id == element.id)
+                if(carrito.some(element => element.id == "1")){
                     let indice = carrito.findIndex(element => element.id == idNombre)
                     carrito[indice].cant++
 
@@ -41,10 +40,10 @@ fetch("./listas.json")
                 
                 
                 localStorage.setItem("productosCarrito", JSON.stringify(carrito))
-
-
+                                                        
+                
             })
-
+            
         })
 
 
@@ -65,6 +64,8 @@ fetch("./listas.json")
 
 
     });
+}
+mostarCards()
 
 //Fin de todas las posibilidades de cards de  listas.json
 
