@@ -1,69 +1,28 @@
 //todas las posibilidades de cards de  listas.json
 
-let carrito = JSON.parse(localStorage.getItem('productosCarrito'))??[]
-console.log(carrito)
-function mostarCards (){
+//let carrito = JSON.parse(localStorage.getItem('productosCarrito'))??[]
+//console.log(carrito)
+function mostarCards() {
     fetch("./listas.json")
-    .then((response) => response.json())
-    .then((data) => {
-        data.forEach((element) => {
+        .then(response => response.json())
+        .then(estilos => { 
+            estilos.forEach((cardEstilo) =>{
 
-        Grid.innerHTML += `
-            <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
-                    <div class="card-header">Estilo ${element.Estilo}</div>
+                let {Estilo, Tipo, imagen, precio, id}= cardEstilo
+                Grid.innerHTML += `
+                <div class="card border-light mb-3" style="max-width: 20rem;">
+                    <div class="card-header">${Estilo}</div>
                         <div class="card-body">
-                                <h4 class="card-title">Precio ${element.Tipo}</h4>
-                                <h4 class="card-title">Precio ${element.tamañoaAncho}</h4>
-                                <h4 class="card-title">Precio ${element.tamañoLargo}</h4>
-                                <h4 class="card-title">Precio ${element.id}</h4>
-                                <h4 class="card-title">Precio ${element.precio}</h4>
-                            <img style="width:200px;" src="${element.imagen}">
-                            <button id="BotonEnviar${element.id}">Agregar</button>
+                            <h4 class="card-title">${Tipo}</h4>
+                           
+                            <p class="card-text">${precio}</p>
+                            <p class="card-text">${id}</p>
                         </div>
-            </div>    `})
-
-        data.forEach(element => {
-            let idNombre = document.getElementById(`BotonEnviar${element.id}`).addEventListener('click', () => {
-                //let elements = data.find(element => element.id == element.id)
-                if(carrito.some(element => element.id == "1")){
-                    let indice = carrito.findIndex(element => element.id == idNombre)
-                    carrito[indice].cant++
-
-                    } else {
-                        let seleccionDetatuaje = {
-                            ...data,
-                            cant: 1
-                                                    } 
-                                                    carrito.push(seleccionDetatuaje)
-                                                    }
-                
-                
-                
-                localStorage.setItem("productosCarrito", JSON.stringify(carrito))
-                                                        
-                
-            })
-            
+                        <div class="card-body"> <img src="${imagen}" alt="imgReferencia"></div>
+                </div>
+        `
+    })
         })
-
-
-
-        //     function botonCarrito (){
-        //         let botonCarrito = document.querySelectorAll("#BotonEnviar");
-        //     botonCarrito.forEach(e => e.addEventListener("click", () => 
-
-
-        //     console.log('click')
-
-
-        //     ))
-
-
-        //     }
-        //     botonCarrito ();
-
-
-    });
 }
 mostarCards()
 

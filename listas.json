@@ -1,4 +1,5 @@
-[{
+[
+    {
         "Estilo": "Tradicional",
         "Tipo": "blanco y negro",
         "tamañoAncho": "10",
@@ -111,5 +112,4 @@
         "id": "15"
     }
     
-
 ]
